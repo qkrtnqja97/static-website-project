@@ -1,0 +1,28 @@
+footer{
+    height:30vh;
+    border-top: 1px black solid;
+    text-align: center;
+}
+
+footer a ,
+footer img{
+    height:50%;
+}
+
+footer ul svg {
+    height: 100%;
+}
+
+#footer-link {
+    margin:0;
+    height:15%;
+    display:flex;
+    justify-content: center;
+    gap:10px;
+    margin:0px 40px 5px 0px;
+}
+
+footer h4,
+footer p {
+    margin:0;
+}

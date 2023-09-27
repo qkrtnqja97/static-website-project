@@ -6,30 +6,109 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
     <title>Soccer</title>
 </head>
 
 <body>
+    <!--
+    <nav id="navigator">
+        <ul id="menubar">
+            <a id="england" href="#premier-league">Premier League</a>
+            <a id="spain" href="#laliga">LaLiga</a>
+            <a id="germany" href="#bundesliga">Bundesliga</a>
+            <a id="italy" href="#serie-a">Serie A</a>
+            <a id="france" href="#ligue-1">Ligue 1</a>
+        </ul>
+    </nav>
+    -->
     <header>
-        <a id="logo-tag" href=index.html><img id="logo" src="imgs/logo.svg"></a>
-        <nav>
-            <ul id="menubar">
-                <a id="england" href="#premier-league">Premier League</a>
-                <a id="spain" href="#laliga">LaLiga</a>
-                <a id="germany" href="#bundesliga">Bundesliga</a>
-                <a id="italy" href="#serie-a">Serie A</a>
-                <a id="france" href="#ligue-1">Ligue 1</a>
-            </ul>
-        </nav>
+        <div class="content">
+            <div class="header-left">
+                <a id="phone">778-829-3951</a>
+                <a id="email">qkrtnqja97@gmail.com</a>
+            </div>
+            <div class="header-right">
+                <a id="signup">SIGN UP</a>
+                <a id="login">LOG IN</a>
+            </div>
+        </div>
     </header>
-    <section id="main-img"><img id="background1" class="background" src="imgs/background1.jpg">
+
+    <section id="main-img">
+        <div class="content">
+            <p id="storeName"><span id="van">VAN</span> <span id="uni">UNI</span></p>
+            <nav>
+                <ul id="menubar">
+                    <a href="pages/products.html">Product</a>
+                    <a href="pages/reviews.html">Reviews</a>
+                    <a href="pages/fq.html">F&Q</a>
+                    <a href="#serie-a">Contact Us</a>
+                </ul>
+            </nav>
+        </div>
+        <p id="brand">GOOD <span>UNIFORM</span> FOR GOOD <br><span>PLAYING</span>.</p>
+        <div id="button-container">
+            <button id="buynow"><a>Buy Now</a></button>
+            <button id="readmore"><a>Read More</a></button>
+        </div>
     </section>
+
+    <section id="short-strength">
+        <div class="content">
+            <div class="first content-div">
+                <div class="strength-icon">
+                    <img src="imgs/customer_service.svg">
+                </div>
+                <div class="strength-content">
+                    <h3>ONLINE SUPPORT 24/7</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, tempore porro. Dolor!</p>
+                </div>
+            </div>
+            <div class="second content-div">
+                <div class="strength-icon">
+                    <img src="imgs/money_back.svg">
+                </div>
+                <div class="strength-content">
+                    <h3>CASH BACK</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, unde impedit.</p>
+                </div>
+            </div>
+            <div class="third content-div">
+                <div class="strength-icon">
+                    <img src="imgs/delivery.svg">
+                </div>
+                <div class="strength-content">
+                    <h3>FREE DELIVERY</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo distinctio maxime ea repellat, pariatur est!</p>
+                </div>
+            </div>
+        </div>
+    </section>  
+
+    <section id="about-us">
+        <div class="content">
+            <div id="about-img">
+                <img src="imgs/about-img.jpeg">
+            </div>
+            <div id="about-content">
+                <span style="font-weight: 500; color:var(--basic_color);">Since <span id="start-year">1954</span></span>
+                <h1>Making A Perfect Uniforom</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eius, dolores repellat iste sint ullam eligendi, delectus mollitia assumenda vitae culpa itaque inventore ea deserunt aliquam ipsum placeat explicabo ipsa.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos eius iusto laudantium, quas culpa beatae dolorem. Dolorum, culpa veritatis. Culpa sequi maiores labore. Voluptatem quod dolorem laborum sed, eos doloribus!</p>
+                <p><span id="experience-year"></span>Years of Experience In Bussiness</p>
+            </div>
+        </div>
+    </section>
+
+    <!--
     <section class="uniform-part" id="premier-league">
         <h3>Premier League</h3>
         <div class="flag-container"><img class="country-flag" src="imgs/premierLeague/england.png"></div><br>
-        <!-- league logo
+        league logo
         <div class="league-logo-container"><img class="league-logo" src="imgs/premier-league.jpeg"></div>
-        -->
+        
         <section class="products">
             <div class="product-container">
                 <div class="uniform-picture-container">
@@ -55,6 +134,10 @@
                 <p>Price: $95</p>
             </div>
         </section>
+        <a href="pages/premiem-league.html" class="nav-to-products">
+            <span>MORE</span>
+            <div calss="transition"></div>
+        </a>
     </section>
     <section class="uniform-part" id="laliga">
         <h3>LaLiga</h3>
@@ -82,6 +165,10 @@
                 <p>Price: $95</p>
             </div>
         </section>
+        <a class="nav-to-products">
+            <span>MORE</span>
+            <div calss="transition"></div>
+        </a>
     </section>
     <section class="uniform-part" id="bundesliga">
         <h3>Bundesliga</h3>
@@ -109,7 +196,10 @@
                 <p>Price: $95</p>
             </div>
         </section>
-        <button>More ..</button>
+        <a class="nav-to-products">
+            <span>MORE</span>
+            <div calss="transition"></div>
+        </a>
     </section>
     <section class="uniform-part" id="serie-a">
         <h3>Serie A</h3>
@@ -137,6 +227,10 @@
                 <p>Price: $95</p>
             </div>
         </section>
+        <a class="nav-to-products">
+            <span>MORE</span>
+            <div calss="transition"></div>
+        </a>
     </section>
     <section class="uniform-part" id="ligue-1">
         <h3>Ligue 1</h3>
@@ -164,8 +258,12 @@
                 <p>Price: $95</p>
             </div>
         </section>
+        <a class="nav-to-products">
+            <span>MORE</span>
+            <div calss="transition"></div>
+        </a>
     </section>
-
+    -->
     <footer>
         <a id="footer-logo" href=index.html><img src="imgs/logo.svg"></a>
         <!-- License: CC Attribution. Made by wishforge.games: https://www.wishforge.games/ -->
@@ -193,6 +291,7 @@
         <h4>Support | Info | Communication | Marketing</h4>
         <p>All rights reserved.<p>
     </footer>
+    <script src="navigator.js"></script>
     
 </body>
 </html>

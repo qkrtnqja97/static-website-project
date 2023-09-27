@@ -1,0 +1,31 @@
+.faq{
+    height:auto;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 5vw auto auto 15vw;
+    grid-template-rows: 60px 60px repeat(11,auto) 80px;
+}
+
+.faq h1{
+    grid-column: 1/5;
+    grid-row: 1/2;
+}
+
+.faq div{
+    border-bottom: 1px dotted black;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.first-line{
+    background-color: rgba(128,128,128,0.1);
+    border-top:1px solid black;
+    font-size: 18px;
+    padding-top:10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.date{
+    opacity: 0.4;
+}

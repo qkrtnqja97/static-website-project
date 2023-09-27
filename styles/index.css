@@ -1,41 +1,191 @@
+:root {
+    --basic_color: rgb(189, 122, 90);
+    --dark_color: rgb(169, 108, 80);
+    --darkest_color: rgb(154, 95, 68);
+    --icon_color: invert(100%) sepia(53%) saturate(5513%) hue-rotate(180deg) brightness(108%) contrast(108%);
+}
+
 body {
     margin:0;
     padding:0;
-    margin: 0 auto;
 }
-header {
+
+#main-img {
+    height:72vh;
+    background-attachment: fixed;
+    position: relative;
+    text-align: center;
+    background-image: url(../imgs/background3.jpeg);
+}
+
+.content {
     display: flex;
+    width:60%;
+    margin:0 auto;
     justify-content: space-between;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 10vh;
-    z-index: 1;
-    box-shadow: 0px 3px 5px -2px gray;
-    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
 }
 
-#logo {
-    height:100%;
-    width: 10vw;
-    fill:white;
-}
-#logo-tag {
-    height:10vh;
-}
-nav a {
-    text-decoration: none;
-    color: black;
+#login {
+    margin-left: 1vw;
 }
 
-nav ul {
-    display: flex;
-}
-
-#menubar a {
+#phone {
     margin-right: 1vw;
 }
+
+.content-div {
+    display: flex;
+}
+
+#uni {
+    font-size: 25px;
+    color: white;
+    opacity: 0.5;
+}
+
+#van {
+    font-size:40px;
+    font-weight: bold;
+    color:white;
+}
+
+#brand {
+    font-size: 70px;
+    color: transparent; -webkit-text-stroke: 1px #fff;
+    transform: rotate(-6deg);
+}
+
+#brand span {
+    color:white;
+}
+
+#button-container {
+    transform: rotate(-6deg);
+}
+
+#main-img button {
+    width:100px;
+    height:35px;
+    color: white;
+    border-radius: 10px;
+    font-weight: border;
+    font-size: 15px;
+}
+
+#buynow {
+    background-color: var(--basic_color);
+    border: none;
+}
+
+#readmore {
+    background-color: rgba(0,0,0,0);
+    border: solid 1px white;
+}
+
+#short-strength {
+    height:21vh;
+    background-color: var(--basic_color);
+}
+
+#short-strength .content{
+    height:100%;
+}
+
+.strength-icon {
+    display: flex;
+    width:30%;
+    height:100%;
+    align-items: center;
+}
+
+.strength-icon img {
+    box-sizing: border-box;
+    padding-left: 1vw;
+    width:70%;
+    height:50%;
+    filter: var(--icon_color);
+}
+
+.strength-content {
+    box-sizing: border-box;
+    width:70%;
+    height:100%;
+    color:#fff;
+    padding-top:2vh;
+}
+
+.strength-content p {
+    line-height: 2vh;
+}
+
+.first {
+    width:33.3%;
+    height:100%;
+}
+
+.second {
+    width:33.3%;
+    height:100%;
+    background-color: var(--dark_color);
+}
+
+.third {
+    width:33.3%;
+    height:100%;
+    background-color: var(--darkest_color);
+}
+
+#about-us {
+    height:988px;
+    text-align: center;
+}
+
+#about-us .content{
+    margin-top: 10vh;
+    height:80%;
+}
+
+#about-img {
+    width: 50%;
+    height: 75%;    
+}
+
+#about-img img {
+    width:100%;
+    height:100%;
+}
+
+#about-content {
+    box-sizing: border-box;
+    width:50%;
+    height:75%;
+    padding-top: 6%;
+    padding-left: 2%;
+    text-align: left;
+}
+
+#about-content h1 {
+    font-size: 35px;
+    font-weight: 900;
+}
+
+#about-content p {
+    margin-top: 50px;
+    font-size: 18px;
+    opacity: 0.5;
+}
+
+#about-content :nth-child(5) {
+    font-size: 30px;
+    opacity: 1;
+}
+
+
+
+
+
+
 
 #england:hover {
     border-bottom: 4px hotpink solid;
@@ -87,14 +237,9 @@ nav ul {
     padding-left: 1vw;
 }
 
-.uniform-part,
-#main-img {
-    padding-top: 10vh;
-    height:70vh;
-    border: 1px black solid;
-    background-attachment: fixed;
-    position: relative;
-    text-align: center;
+.uniform-part {
+    width: 90vw;
+    margin:0 auto;
 }
 
 .background {
@@ -160,39 +305,24 @@ nav ul {
     transition: height 100ms ease-in-out;
 }
 
+.uniform-picture-container{
+    transform: scale(1.2);
+    transition: transform 0.5s;
+}
+
+#premier-league button {
+    height: 4vh;
+    width: 10vw;
+    margin-top:3vh;
+    border-radius: 70%;
+    background-image: linear-gradient(45deg, Violet, Orange) ;
+    border:none;
+}
+
 .uniform-part button {
     height: 4vh;
     width: 10vw;
-    background-color: antiquewhite;
     margin-top:3vh;
     border-radius: 70%;
-}
-
-footer{
-    height:20vh;
-    background-color: skyblue;
-    text-align: center;
-}
-
-footer a ,
-footer img{
-    height:50%;
-}
-
-footer ul svg {
-    height: 100%;
-}
-
-#footer-link {
-    margin:0;
-    height:15%;
-    display:flex;
-    justify-content: center;
-    gap:10px;
-    margin:0px 40px 5px 0px;
-}
-
-footer h4,
-footer p {
-    margin:0;
+    border:none;
 }
