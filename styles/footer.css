@@ -13,6 +13,11 @@ footer ul svg {
     height: 100%;
 }
 
+footer li {
+    margin-right:50px;
+    list-style: none;
+}
+
 #footer-link {
     margin:0;
     height:15%;

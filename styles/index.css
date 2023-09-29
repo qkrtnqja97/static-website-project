@@ -10,12 +10,33 @@ body {
     padding:0;
 }
 
+#scrollNav {
+    display:none;
+    z-index: 1;
+    background-color: var(--basic_color);
+}
+
+section {
+    width: 100%;
+}
 #main-img {
     height:72vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     background-attachment: fixed;
     position: relative;
     text-align: center;
     background-image: url(../imgs/background3.jpeg);
+    background-size: cover;
+    animation:animate_background;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+}
+
+#main-img:hover {
+    animation-play-state: paused;
 }
 
 .content {
@@ -38,13 +59,13 @@ body {
     display: flex;
 }
 
-#uni {
+.uni {
     font-size: 25px;
     color: white;
     opacity: 0.5;
 }
 
-#van {
+.van {
     font-size:40px;
     font-weight: bold;
     color:white;
@@ -93,7 +114,7 @@ body {
 }
 
 .strength-icon {
-    display: flex;
+    display: inline;
     width:30%;
     height:100%;
     align-items: center;
@@ -181,7 +202,12 @@ body {
     opacity: 1;
 }
 
+#experience-year {
+    color:var(--basic_color);
+}
+
 .product-summary {
+    position: absolute;
     display: flex;
     height: 20%;
     text-align: center;
@@ -190,6 +216,11 @@ body {
     margin:0 auto;
     margin-top: 30px;
     padding:10px;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-delay:3s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
 }
 
 .outCircle {
@@ -261,6 +292,9 @@ body {
     background-attachment: fixed;
     position: relative;
     text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     background-image: url(../imgs/background1.jpeg);
 }
 
@@ -274,7 +308,7 @@ body {
 }
 
 #review-content {
-    display:flex;
+    display:grid;
     width:100%;
     height:45%;
     grid-template-columns: 30% 30% 30%;
@@ -294,7 +328,7 @@ body {
 
 .profile-img {
     width:80px;
-    heighT:80px;
+    height:80px;
     border-radius: 70%;
     float:left;
     margin-right: 20px;
@@ -350,139 +384,152 @@ body {
 
 
 
-
-
-
-
-
-#england:hover {
-    border-bottom: 4px hotpink solid;
+@keyframes animate_background {
+    0%   {background-position:0% 0%}
+   50%  {background-position:0% 80%;}
+   100%  {background-position:0% 0%;}	
 }
 
-#premier-league h3 {
-    border-left: 4px hotpink solid;
-    margin-left: 0.5vw;
-    padding-left: 1vw;
+@keyframes move {
+    from {
+        left: 0;
+      }
+      to {
+        left: 250px;
+      }
 }
 
-#spain:hover {
-    border-bottom: 4px orange solid;
+@media (min-width: 0px) and (max-width: 1023px) {
+    .content {
+        font-size: 13px;
+        width: 100%;
+    }
+    
+    #main-img {
+        animation:none;
+    }
+    #about-img {
+        width:50%;
+        height:80%;
+    }    
+
+    #about-content {
+        width:50%;
+        height:80%;
+        margin-bottom: 20px;
+    }
+
+    #about-content p {
+        font-size: 13px;
+        margin-top: 30px;
+    }
+
+    #about-content :nth-child(5) {
+        font-size: 20px;
+    }
+
+    .outCircle {
+        width:80px;
+        height:80px;
+        margin: 0 auto;
+    }
+
+    .inCircle {
+        width: 60px;
+        height:60px;
+    }
+    .product-summary {
+        position:relative;
+        display:flex;
+        animation: none;
+        margin-top:-80px;
+    }
+
+    #products {
+        height:1600px;
+        margin-top:-250px;
+    }
+
+    #products-container {
+        height: 65%;
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 25% 25% 25% 25%;
+    }
+
+    #products h1 {
+        margin-bottom: 30px;
+    }
+
+    #productBtn {
+        margin-top: 280px;
+    }
+
+    .review-item {
+        font-size:12px;
+    }
+
+    .profile-img {
+        width:50px;
+        height:50px;
+    }
+
+    .blog-item p {
+        font-size: 12px;
+        line-height:12px;
+    }
+
+    .blog-item h3 {
+        font-size: 13px;
+    }
 }
 
-#laliga h3 {
-    border-left: 4px orange solid;
-    margin-left: 0.5vw;
-    padding-left: 1vw;
-}
+@media (max-width: 599px) {
+    .product-summary {
+        display: none;
+    }
 
-#germany:hover {
-    border-bottom: 4px red solid;
-}
+    #about-us .content {
+        display:block;
+    }
 
-#bundesliga h3 {
-    border-left: 4px red solid;
-    margin-left: 0.5vw;
-    padding-left: 1vw;
-}
+    #about-img {
+        width: 100%;
+        height:50%;
+    }
+    
+    #about-content {
+        width: 100%;
+    }
 
-#italy:hover {
-    border-bottom: 4px green solid;
-}
+    #products {
+        height: 2700px;
+    }
 
-#serie-a h3 {
-    border-left: 4px green solid;
-    margin-left: 0.5vw;
-    padding-left: 1vw;
-}
+    #products-container {
+        height:80%;
+        row-gap: 80px;
+        grid-template-columns: 90%;
+        grid-template-rows: repeat(8,10%);
+    }
 
-#france:hover {
-    border-bottom: 4px blue solid;
-}
+    #testimonial {
+        height:1000px;
+    }
 
-#ligue-1 h3 {
-    border-left: 4px blue solid;
-    margin-left: 0.5vw;
-    padding-left: 1vw;
-}
+    #review-content {
+        height:80%;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3,30%);
+        gap:0px;
+    }
 
-.uniform-part {
-    width: 90vw;
-    margin:0 auto;
-}
+    #blog .content{
+        height: 1500px;
+        width: 100%;
+    }
 
-.background {
-    width:100%;
-    height:100%;
-}
-
-.uniform-part h3 {
-    text-align: left;
-}
-
-.flag-container,
-.league-logo-container,
-.uniform-picture-container {
-    margin-top:1vh;
-    margin-left:0.5vw;
-    height:4vh;
-    width:4vw;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 2px 2px 2px 2px;
-}
-
-.country-flag,
-.league-logo {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-.product-container {
-    position:relative;
-    height: 100%;
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.uniform-picture-container {
-    overflow: hidden;
-    width: 100%;
-    height: 80%;
-    position: relative;
-    border: 1px solid var(--bg-60);
-    background-color: #ffffff;
-    box-shadow: none;
-}
-
-.uniform-picture {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateY(-35%) translateX(-50%);
-    height: 145%;
-    transition: height 100ms ease-in-out;
-}
-
-.uniform-picture-container{
-    transform: scale(1.2);
-    transition: transform 0.5s;
-}
-
-#premier-league button {
-    height: 4vh;
-    width: 10vw;
-    margin-top:3vh;
-    border-radius: 70%;
-    background-image: linear-gradient(45deg, Violet, Orange) ;
-    border:none;
-}
-
-.uniform-part button {
-    height: 4vh;
-    width: 10vw;
-    margin-top:3vh;
-    border-radius: 70%;
-    border:none;
+    #blog-container {
+        grid-template-columns: 80%;
+        grid-template-rows: repeat(4,25%);
+    }
 }

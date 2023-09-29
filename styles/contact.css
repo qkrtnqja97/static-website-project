@@ -1,0 +1,76 @@
+#main-img {
+    height: 380px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 7rem;
+    padding: 70px 2rem;
+}
+
+.contact-container h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 4rem;
+}
+
+.form-field {
+    border-bottom: 0.5px solid #333;
+}
+
+.form-btn {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.map {
+    width: 50vw;
+    height: 100%;
+}
+
+input[type="text"] {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    background: none;
+}
+
+input[type="email"] {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    background: none;
+}
+
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+
+button,
+input[type="submit"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+}

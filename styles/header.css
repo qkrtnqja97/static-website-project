@@ -1,6 +1,8 @@
 header {
-    height: 3vh;
+    height: 4vh;
     background-color: var(--basic_color);
+    color: white;
+    line-height: 30px;
 }
 
 header a {
@@ -35,8 +37,17 @@ nav ul {
     display: flex;
 }
 
-#menubar a {
+.menubar a {
     margin-left: 1vw;
+    text-decoration: none;
+}
+
+.menubar a:hover {
+    color:var(--basic_color);
+}
+
+.menubar li {
+    list-style: none;
 }
 
 #navigator {

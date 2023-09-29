@@ -1,2 +1,1 @@
-STILL WORKING.
-NOT YET FINISHED.
+This is my first port-folio
